@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 6rem;
+    background-image: url("../Webservice/Images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Baloo Paaji 2', cursive;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.main {
+    width: 75rem;
+}
+
+.sidebar {
+    border-radius: .4rem;
+    background: rgba(72, 72, 74, 0.8);
+    width: 25rem;
+    height: 655px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+
+#recipe {
+    display: grid;
+    width: auto;
+    grid-gap: 6rem;
+    grid-template-columns: repeat(
+    auto-fit,
+    minmax(20rem, 1fr)
+  );
+    align-items: start;
+}
+
+.card {
+    text-align: center;
+    background: rgba(72, 72, 74, 0.8);
+    border-radius: .4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.card:hover {
+     transform: translateY(-.5%);
+     box-shadow: 0 4rem 8rem rgba(0, 0, 0, .4);
+}
+
+.card div {
+    border: 3px solid black;
+    padding: 10px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.card div:hover {
+    background: rgba(72, 72, 74, 1);
+}
+
+.sidebar h1 {
+    text-align: center;
+}
+
+#ingredients div {
+    text-align: center;
+    border: 3px solid black;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+#ingredients div:hover{
+    background: rgba(72, 72, 74, 1);
+}
+
+#ingredients h1 {
+    font-size: 20px;
+}
+
+#favorites div {
+    cursor: pointer;
+    text-align: center;
+    border: 3px solid black;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+#favorites div:hover {
+    background: crimson;
+}
