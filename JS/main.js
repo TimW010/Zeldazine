@@ -6,6 +6,7 @@ let recipe;
 let ingredients;
 let favorites;
 let savedFavorites = [];
+let randomColor;
 
 function init(){
 
@@ -59,16 +60,16 @@ function deleteFromFavorites(meal){
     localStorage.removeItem('favorites');
 }
 
-function addToFavorites(meal){
+function addToFavorites(meal, color){
     console.log(`Added ${meal} to favorites`);
     let favoriteMeal = document.createElement('div')
     favoriteMeal.innerText = meal;
+    favoriteMeal.style.backgroundColor = "#" + color;
     favorites.appendChild(favoriteMeal);
     favoriteMeal.addEventListener('click', function (){
         deleteFromFavorites(favoriteMeal);
     });
     saveFavorites(meal);
-    //localStorage.setItem('favorites', meal);
 }
 
 function saveFavorites(meal){
@@ -119,7 +120,8 @@ function addMeal(meal, image, ingredients) {
         let mealToFavorites = document.createElement('div');
         mealToFavorites.innerText = 'Add to favorites';
         mealToFavorites.addEventListener('click', function(){
-            addToFavorites(meal);
+            randomColor = Math.floor(Math.random()*16777215).toString(16);
+            addToFavorites(meal, randomColor);
         });
         card.appendChild(mealToFavorites);
 

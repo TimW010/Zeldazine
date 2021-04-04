@@ -3,24 +3,17 @@ body {
     justify-content: center;
     align-content: center;
     padding: 6rem;
-    background-image: url("../Webservice/Images/background.jpg");
+    background-image: url("../Webservice/Images/forest.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Comic Sans MS', cursive;
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        padding: 6rem;
-        background-image: url("../Webservice/Images/mobileBackground.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        font-family: 'Comic Sans MS', cursive;
+@media screen and (max-width: 600px) {
+    .wrapper {
+        display: none;
+        width: 100%;
     }
 }
 
